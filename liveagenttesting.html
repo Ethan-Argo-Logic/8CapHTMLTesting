@@ -1,26 +1,44 @@
 
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Web Chat Test</title>
+	<head>
+	    <meta charset="UTF-8">
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	    <title>Web Chat Test</title>
   
-</head>
+	</head>
 	<body>
-		<script type='text/javascript' src='https://c.la1-c2-ukb.salesforceliveagent.com/content/g/js/49.0/deployment.js'></script>
+		<body>
+		<!-- live chat button -->
+		<a id="liveagent_button_online_573i00000004DD7" href="javascript://Chat" style="display: none;" onclick="liveagent.startChat('573i00000004DD7')">
+			Online Chat
+		</a>
+		<div id="liveagent_button_offline_573i00000004DD7" style="display: none;">
+			Offline Chat
+		</div>
 
-		<a id="liveagent_button_online_5730o000000Xxbj" href="javascript://Chat" style="display: none;" onclick="liveagent.startChat('5730o000000Xxbj')"><!-- Online Chat Content -->
-			Chat now
-		</a><div id="liveagent_button_offline_5730o000000Xxbj" style="display: none;"><!-- Offline Chat Content --></div><script type="text/javascript">
-	if (!window._laq) { window._laq = []; }
-	window._laq.push(function(){liveagent.showWhenOnline('5730o000000Xxbj', document.getElementById('liveagent_button_online_5730o000000Xxbj'));
-	liveagent.showWhenOffline('5730o000000Xxbj', document.getElementById('liveagent_button_offline_5730o000000Xxbj'));
-	});
-		liveagent.init('https://d.la1-c2-ukb.salesforceliveagent.com/chat', '5720o000000Xwaj', '00D0o0000018jsR');
+		<script type="text/javascript">
+			if (!window._laq) { window._laq = []; }
+			window._laq.push(
+				function(){
+					liveagent.showWhenOnline(
+						'573i00000004DD7', 
+						document.getElementById('liveagent_button_online_573i00000004DD7')
+					);
+					liveagent.showWhenOffline(
+						'573i00000004DD7', 
+						document.getElementById('liveagent_button_offline_573i00000004DD7')
+					);
+				}
+			);
 		</script>
 
 		
-	
+		<!-- live agent deployment -->
+		<script type='text/javascript' src='https://c.la1c1.salesforceliveagent.com/content/g/deployment.js'></script>
+		<script type='text/javascript'>
+			liveagent.init('https://d.la1c1.salesforceliveagent.com/chat', '572i00000004DD7', '00Di0000000HJOD');
+		</script>
+	</body>
 	</body>
 </html>
