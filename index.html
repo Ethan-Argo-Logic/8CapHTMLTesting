@@ -1,10 +1,9 @@
-
 <!DOCTYPE html>
 <html lang="en">
 	<head>
 	    <meta charset="UTF-8">
 	    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	    <title>Web Chat Test 2</title>
+	    <title>Web Chat Test</title>
   
 	</head>
 <body>
@@ -20,6 +19,7 @@
 
 <script type='text/javascript' src='https://service.force.com/embeddedservice/5.0/esw.min.js'></script>
 <script type='text/javascript'>
+    var currentLanguage;
 	var initESW = function(gslbBaseURL) {
 		embedded_svc.settings.displayHelpButton = true; //Or false
 		embedded_svc.settings.language = ''; //For example, enter 'en' or 'en-US'
@@ -32,6 +32,40 @@
 
 		// Settings for Chat
 		embedded_svc.settings.directToButtonRouting = function(prechatFormData) {
+            if (!currentLanguage)
+            {
+                return '5730o000000XxbjAAC';
+            }
+            else 
+            {
+                switch (currentLanguage)
+                {
+                    case 'EN': 
+                        return '';
+                        break;
+                    case 'DE':
+                        return '';
+                        break;
+                    case 'FR':
+                        return '5730o000000LXRHAA4';
+                        break;
+                    case 'ID':
+                        return '';
+                        break;
+                    case 'KR':
+                        return '';
+                        break;
+                    case 'CN':
+                        return '';
+                        break;
+                    case 'PT':
+                        return '';
+                        break;
+                    case 'TH':
+                        return '';
+                        break;
+                }
+            }
 			return "5730o000000LXRHAA4";
 		};
 		//embedded_svc.settings.prepopulatedPrechatFields = {}; //Sets the auto-population of pre-chat form fields
